@@ -1,38 +1,379 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-top {
+  background-color: #FFF;
+}
+
+/* Home screen */
+
+.logo {
+  width: 5.5em;
+  height: 4.5em;
+}
+
+.home-text {
+  position: absolute;
+  left: 50%;
+  color: #000;
+  text-align: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  top: 20%;
+  transform: translate(-50%, 10%);
+  font-size: 3rem;
+  font-family: 'Marker Felt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0px;
+}
+
+.intro-text {
+  top: 70%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-family: monospace, 'Courier New', Courier;
+  margin: 20px;
+  width: 100%;
+  padding: 50px;
+}
+
+.my-pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 18em;
+  border-radius: 100%;
+}
+
+.card {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.cardAnimation:hover {
+  box-shadow: 15px 15px rgba(0, 0, 0, 0.65);
+}
+
+.carousel {
+  margin-top: 4%;
+}
+
+@media only screen and (max-width: 965px) {
+  .nav-item .resume {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 966px) and (max-width: 3000px) {
+  .intro-text {
+    top: 75%;
+  }
+}
+
+@media only screen and (min-width: 510px) and (max-width: 965px) {
+  .my-pic {
+    top: 55%;
+    max-width: 15em;
+  }
+  .intro-text {
+    top: 80%;
+  }
+}
+
+@media only screen and (max-width: 509px) {
+  .my-pic {
+    top: 60%;
+    max-width: 14em;
+  }
+  .welcome-text {
+    font-size: 2.5em;
+  }
+  .intro-text {
+    top: 85%;
+    font-size: medium;
+    text-align: center;
+  }
+}
+
+@media screen and (max-height: 600px) { 
+  .my-pic {
+    display: none;
+  }
+  .welcome-text {
+    top: 30%;
+  }
+  .intro-text {
+    top: 65%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-height: 430px) {
+  .my-pic {
+    display: none;
+  }
+  .intro-text {
+    top: 75%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-height: 360px) { 
+  .my-pic {
+    display: none;
+  }
+  .welcome-text {
+    margin-top: 10%;
+  }
+  .intro-text {
+    top: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* --- */
+
+.parallax-image {
+  position: relative;
+  height: 85vh;
+}
+
+.parallax-text {
+  background-color: #FFF;
+  opacity: 0.75;
+  top: 50%;
+  position: absolute;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: Arial;
+}
+
+.btn-send {
+  background: linear-gradient(to right, #F9D976, #F39F86)
+}
+
+/* Social media icons - Contact component */
+
+.fa-icon:hover {
+  transition: all 0.4s;
+}
+
+.linkedin-icon:hover {
+  color: #0077b5;
+}
+
+.github-icon:hover {
+  color: #333;
+}
+
+/* Below code is for the fluid simulator */
+@font-face {
+  font-family: 'iconfont';
+  src: url('assets/fonts/iconfont.ttf') format('truetype');
+}
+          
+* {
+  user-select: none;
+}
+
+html, body {
+  overflow: scroll;
+  background-color: #FFF;
+}
+
+body {
+  width: 100%;
+  padding-top: 6em;
+}
+
+canvas {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.dg {
+  opacity: 0.9;
+}
+  
+.dg .property-name {
+  overflow: visible;
+}
+  
+.bigFont {
+  font-size: 150%;
+  color: #8C8C8C;
+}
+  
+.cr.function.appBigFont {
+  font-size: 150%;
+  line-height: 27px;
+  color: #A5F8D3;
+  background-color: #023C40;
+}
+  
+.cr.function.appBigFont .property-name {
+  float: none;
+}
+  
+.cr.function.appBigFont .icon {
+  position: sticky;
+  bottom: 27px;
+}
+  
+.icon {
+  font-family: 'iconfont';
+  font-size: 130%;
+  float: right;
+}
+  
+.twitter:before {
+  content: 'a';
+}
+  
+.github:before {
+  content: 'b';
+}
+
+.app:before {
+  content: 'c';
+}
+  
+.discord:before {
+  content: 'd';
+}
+  
+.link {
+  width: 100%;
+  display: inline-block;
+}
+  
+.link img {
+  width: 100%;
+}
+
+/* CSS for navbar & its animation */
+
+div.nav {
+  width: 50%;
+  margin: 0 auto;
+}
+
+div.nav ul {
+  list-style: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div.nav ul li {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+div.nav ul li .nav-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 15px;
+  font-size: 17px;
+}
+
+div.nav ul li .nav-link,
+div.nav ul li .nav-link:after,
+div.nav ul li .nav-link:before {
+  transition: all .5s;
+}
+
+div.shift ul li .nav-link {
+  position:relative;
+  z-index: 1;
+}
+
+div.shift ul li .nav-link:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: linear-gradient(to right, #F9D976, #F39F86);
+  border-radius: 15px 0px;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+div.shift ul li .nav-link:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+li.nav-item>.nav-link.active {
+  border-bottom: 3px solid #F39F86;
+}
+
+/* About me page */
+p {
+  margin-bottom: 2px;
+}
+
+.aboutme {
+  margin-bottom: 5px;
+  padding: 20px 15px;
+}
+
+.aboutme-heading {
+  font-variant: small-caps;
+}
+
+.aboutme-ex-ed-container {
+  position: relative;
+  margin: 0px 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.div1 {
+  margin-bottom: 15px; 
+}
+
+.aboutme-skills-subheading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+@media screen and (max-width: 750px) {
+  .aboutme-ex-ed-container {
+    grid-template-columns: 1fr;
+    width: auto;
+    text-align: center;
+  }
+  .skills-subheading {
+    font-size: larger;
+    font-weight: 500;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* ---- */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fluid-canvas {
+  max-height: 85vh;
 }

@@ -15,6 +15,14 @@ export default function Projects() {
     report: "EyeTracking.pdf"
   },
   {
+    image: "BreastCancerPrediction.jpeg",
+    title: "Breast Cancer Prediction",
+    date: "Nov 2020 - Jan 2021",
+    text: `This Machine Learning project investigates various ML algorithms that are used to train the models and determine if the breast cancer is benign or malignant. The dataset used is taken from Kaggle – Wisconsin breast cancer dataset.`,
+    github: "https://github.com/VibhaSNavale/Breast-Cancer-Prediction",
+    report: "BreastCancerPrediction.pdf"
+  },
+  {
     image: "FaceRecognition.jpeg",
     title: "Face recognition system using Python (OpenCV)",
     date: "July 2019 - Aug 2019",
@@ -77,11 +85,11 @@ export default function Projects() {
         {
           cardItems.map((item) => {
             return (
-              <Card style={{ width: "24rem", margin: "auto" }} className="cardAnimation">
+              <Card style={{ width: "24rem", margin: "auto", minHeight: "32rem" }} className="cardAnimation">
                 <Card.Img variant="top" src={require(`../assets/images/${item.image}`)} style={{ maxHeight:  "13rem" }} />
                 <Card.Body>
                   <Card.Title>{item.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">{item.date}</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted" style={{fontSize: "15px"}}>{item.date}</Card.Subtitle>
                   <Card.Text>{item.text}</Card.Text>
                 </Card.Body>
                 <Card.Footer>

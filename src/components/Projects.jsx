@@ -12,7 +12,8 @@ export default function Projects() {
     date: "Aug 2020 - July 2021",
     text: "This project helps increase security by providing a double-layer protection – face detection + entering and identifying gaze-based PINs using a web camera through real-time eye detection and tracking.",
     github: "https://github.com/VibhaSNavale/Eye-Movement-based-PIN-Authentication",
-    report: "EyeTracking.pdf"
+    report: "EyeTracking.pdf",
+    paper: "https://www.ijrti.org/papers/IJRTI2210049.pdf"
   },
   {
     image: "BreastCancerPrediction.jpeg",
@@ -95,7 +96,9 @@ export default function Projects() {
                 <Card.Footer>
                   <Card.Link href={item.github} target="_blank" rel="noreferrer noopener">Github</Card.Link>
                   {item.report &&
-                  <Card.Link href={require(`../assets/pdfs/${item.report}`)} target="_blank" rel="noreferrer noopener" style={{float: "right"}}>View Report (PDF)</Card.Link>}
+                  <Card.Link href={require(`../assets/pdfs/${item.report}`)} target="_blank" rel="noreferrer noopener" style={{float: "right"}}>View Report</Card.Link>}
+                  {item.paper &&
+                  <Card.Link href={item.paper} target="_blank" rel="noreferrer noopener" style={{float: "right"}}>View Paper</Card.Link>}
                 </Card.Footer>
               </Card>
             )

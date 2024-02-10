@@ -27,8 +27,8 @@ export default function Home() {
             onInit={(typewriter)=> {
               typewriter
               .typeString(`I am <b>VIBHA SUNEEL NAVALE,</b><br/>
-                a Software Developer. <br/>
-                I write code during the day... And at night? I fix the 10,000 bugs that I encounter during the day 😆`)
+                an MS in Computer Science student at the University of Illinois at Chicago (UIC) <br/>
+                bringing over 2 years of experience as a Full-stack Software Engineer.`)
               .start();
             }}
           />

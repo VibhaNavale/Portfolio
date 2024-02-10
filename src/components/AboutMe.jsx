@@ -54,10 +54,10 @@ export default function AboutMe() {
       <div className="text-center">
         <div className="aboutme bg-light">
           <u><h3 className="aboutme-heading">A little bit about who I am and what I do</h3></u>
-          <div>I am Vibha and I am from Bangalore – The silicon city of India. <br/>
-            I currently work as a Software Engineer at Cimpress.
-            I graduated from RNS Institute of Technology, Bangalore, India, with a bachelors degree in Information Science and Engineering. <br/>
-            It has been a year since I first started working, and I am loving every bit of it! I work on various technologies and am constantly learning about new stuff.<br/>
+          <div>I am Vibha, an MS in Computer Science student at the University of Illinois at Chicago. <br/>
+            I am originally from Bangalore, India, but currently reside in Chicago, IL. <br/>
+            Prior to starting my graduate studies, I worked as a Software Engineer at Cimpress for over 2 years and have a Bachelor's degree in Information Science and Engineering. <br/>
+            I have worked on various tools and technologies such as React, Node.js, GraphQl, etc., and am constantly learning and exploring new technologies.<br/>
           </div>
         </div>
         <div className="aboutme aboutme-ex-ed-container">
@@ -84,31 +84,36 @@ export default function AboutMe() {
             <u><h3 className="aboutme-heading">Education</h3></u>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span> B.E. Information Science and Engineering</span><br/>
+              <span> Master of Science in Computer Science</span><br/>
               <span className="text-muted">
-                Board: VTU<br/>
-                CGPA: 9.08/10<br/>
-                Graduated in: 2021<br/>
-                RNS Institute of Technology, Bangalore, India</span>
+                University of Illinois at Chicago, IL</span>
+                Program Duration: Jan 2024 - Expected Dec 2025<br/>
             </div>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span> XII</span><br/>
+              <span> B.E. Information Science and Engineering</span><br/>
               <span className="text-muted">
-                Board: Karnataka State Board<br/>
-                Percentage: 84%<br/>
-                Graduated in: 2017<br/>
+                RNS Institute of Technology, Bangalore, India</span>
+                Program Duration: 2017 - 2021<br/>
+                GPA: 9.08/10<br/>
+                Affiliated to: Visvesvaraya Technological University (VTU)<br/>
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faGraduationCap} />
+              <span> 11th and 12th grade </span><br/>
+              <span className="text-muted">
                 Vidya Jyothi PU College, Kolar, India
+                Program Duration: 2015 - 2017<br/>
               </span>
             </div>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
               <span> X</span><br/>
               <span className="text-muted">
-                Board: CBSE<br/>
-                CGPA: 10/10<br/>
-                Graduated in: 2015<br/>
                 R.L. Jalappa Central School, Kolar, India</span>
+                Graduated in: 2015<br/>
+                GPA: 10/10<br/>
+                Board: CBSE<br/>
             </div>
           </div>
         </div>
@@ -118,15 +123,15 @@ export default function AboutMe() {
             <Row>
               <Col><FontAwesomeIcon icon={faDatabase} color="#E55958" size="2x" />
                 <p className="aboutme-skills-subheading">Languages and Databases</p>
-                <p>Javascript, HTML+CSS, Java, Basic  C++, C, & Python; SQL/PostgreSQL</p>
+                <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, Basic  C++, C#, & Python</p>
               </Col>
               <Col><FontAwesomeIcon className="fa-icon" icon={faTools} color="#037D49" size="2x" />
                 <p className="aboutme-skills-subheading">Tools and Technologies</p>
-                <p>Git, AWS, Android app development (using Java)</p>
+                <p>Git, AWS, Jira, Cortex, Miro </p>
               </Col>
               <Col><FontAwesomeIcon icon={faLineChart} color="#894EA4" size="2x" />
                 <p className="aboutme-skills-subheading">Frameworks and Libraries</p>
-                <p>ReactJS, NodeJS, Basic Angular</p>
+                <p>React, Node.js, Angular, Jest, Mocha</p>
               </Col>
             </Row>
           </Container>

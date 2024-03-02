@@ -65,18 +65,18 @@ export default function AboutMe() {
             <u><h3 className="aboutme-heading">Experience</h3></u>
             <div>
               <FontAwesomeIcon icon={faComputer} />
-              <span> Software Engineer</span><br/>
+              <span>Software Engineer</span><br/>
               <span className="text-muted">
                 Cimpress<br/>
-                Bangalore, India<br/>
-                Working since: August 2021</span>
+                Bangalore, India | Remote<br/>
+                Duration: August 2021 - December 2023</span>
             </div>
             <div>
               <FontAwesomeIcon icon={faMobilePhone} />
-              <span> Android App Developer Intern</span><br/>
+              <span>Android App Developer Intern</span><br/>
               <span className="text-muted">
                 NS Jain Constructions<br/>
-                Mangalore, India<br/>
+                Mangalore, India | Remote<br/>
                 Duration: June 2020 - July 2020</span>
             </div>
           </div>
@@ -84,36 +84,17 @@ export default function AboutMe() {
             <u><h3 className="aboutme-heading">Education</h3></u>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span> Master of Science in Computer Science</span><br/>
-              <span className="text-muted">
-                University of Illinois at Chicago, IL</span>
-                Program Duration: Jan 2024 - Expected Dec 2025<br/>
+              <span>Master of Science in Computer Science</span><br/>
+              <span className="text-muted">University of Illinois at Chicago, IL<br/>
+              Program Duration: Jan 2024 - Expected Dec 2025</span><br/>
             </div>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span> B.E. Information Science and Engineering</span><br/>
-              <span className="text-muted">
-                RNS Institute of Technology, Bangalore, India</span>
-                Program Duration: 2017 - 2021<br/>
-                GPA: 9.08/10<br/>
-                Affiliated to: Visvesvaraya Technological University (VTU)<br/>
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faGraduationCap} />
-              <span> 11th and 12th grade </span><br/>
-              <span className="text-muted">
-                Vidya Jyothi PU College, Kolar, India
-                Program Duration: 2015 - 2017<br/>
-              </span>
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faGraduationCap} />
-              <span> X</span><br/>
-              <span className="text-muted">
-                R.L. Jalappa Central School, Kolar, India</span>
-                Graduated in: 2015<br/>
-                GPA: 10/10<br/>
-                Board: CBSE<br/>
+              <span>Bachelor of Engineering in Information Science</span><br/>
+              <span className="text-muted">RNS Institute of Technology, Bangalore, India<br/>
+              Program Duration: 2017 - 2021<br/>
+              GPA: 9.08/10<br/>
+              Affiliated to: Visvesvaraya Technological University (VTU)</span><br/>
             </div>
           </div>
         </div>
@@ -123,7 +104,7 @@ export default function AboutMe() {
             <Row>
               <Col><FontAwesomeIcon icon={faDatabase} color="#E55958" size="2x" />
                 <p className="aboutme-skills-subheading">Languages and Databases</p>
-                <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, Basic  C++, C#, & Python</p>
+                <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, Basic C++, C#, & Python</p>
               </Col>
               <Col><FontAwesomeIcon className="fa-icon" icon={faTools} color="#037D49" size="2x" />
                 <p className="aboutme-skills-subheading">Tools and Technologies</p>
@@ -131,7 +112,7 @@ export default function AboutMe() {
               </Col>
               <Col><FontAwesomeIcon icon={faLineChart} color="#894EA4" size="2x" />
                 <p className="aboutme-skills-subheading">Frameworks and Libraries</p>
-                <p>React, Node.js, Angular, Jest, Mocha</p>
+                <p>Next.js, React, Node.js, Angular, Jest, Mocha</p>
               </Col>
             </Row>
           </Container>

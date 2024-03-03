@@ -65,7 +65,7 @@ export default function AboutMe() {
             <u><h3 className="aboutme-heading">Experience</h3></u>
             <div>
               <FontAwesomeIcon icon={faComputer} />
-              <span>Software Engineer</span><br/>
+              <span> Software Engineer</span><br/>
               <span className="text-muted">
                 Cimpress<br/>
                 Bangalore, India | Remote<br/>
@@ -73,7 +73,7 @@ export default function AboutMe() {
             </div>
             <div>
               <FontAwesomeIcon icon={faMobilePhone} />
-              <span>Android App Developer Intern</span><br/>
+              <span> Android App Developer Intern</span><br/>
               <span className="text-muted">
                 NS Jain Constructions<br/>
                 Mangalore, India | Remote<br/>
@@ -84,13 +84,13 @@ export default function AboutMe() {
             <u><h3 className="aboutme-heading">Education</h3></u>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span>Master of Science in Computer Science</span><br/>
+              <span> Master of Science in Computer Science</span><br/>
               <span className="text-muted">University of Illinois at Chicago, IL<br/>
               Program Duration: Jan 2024 - Expected Dec 2025</span><br/>
             </div>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
-              <span>Bachelor of Engineering in Information Science</span><br/>
+              <span> Bachelor of Engineering in Information Science</span><br/>
               <span className="text-muted">RNS Institute of Technology, Bangalore, India<br/>
               Program Duration: 2017 - 2021<br/>
               GPA: 9.08/10<br/>

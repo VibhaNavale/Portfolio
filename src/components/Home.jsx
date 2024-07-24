@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import NavHeader from "./NavHeader";
-import VibhaNavale from "../assets/images/VibhaNavale.jpg";
+import VibhaNavale from "../assets/images/VibhaNavale.jpeg";
 
 export default function Home() {
 
@@ -17,7 +17,7 @@ export default function Home() {
       <canvas className="fluid-canvas"></canvas>
       <div>
         <h1 className="home-text welcome-text">Welcome to my portfolio!</h1><br/>
-        <img src={VibhaNavale} alt="logo" className="my-pic" />
+        <img src={VibhaNavale} alt="Vibha" className="my-pic" />
         <div className="home-text intro-text">
           <Typewriter
             options={{
@@ -26,9 +26,9 @@ export default function Home() {
             }}
             onInit={(typewriter)=> {
               typewriter
-              .typeString(`I am <b>VIBHA SUNEEL NAVALE,</b><br/>
-                an MS in Computer Science student at the University of Illinois at Chicago (UIC) <br/>
-                bringing over 2 years of experience as a Full-stack Software Engineer.`)
+              .typeString(`I am <b>VIBHA NAVALE,</b><br/>
+                an MS in Computer Science student at the University of Illinois Chicago (UIC) <br/>
+                with 2.5 years of experience as a Full-stack Software Engineer.`)
               .start();
             }}
           />

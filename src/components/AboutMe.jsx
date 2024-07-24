@@ -48,7 +48,7 @@ export default function AboutMe() {
       <Parallax className="parallax-image" bgImage={ColorSplash} bgImageStyle={{height: '110%', width: '100%'}} strength={800}>
         <div style={{ height: "500px" }}>
           <div className="parallax-text">Hi there! Hope you are having a fantastic day :) <br/>
-          This page has a brief summary about me and my journey. Let's  dive in!</div>
+          This page has a brief summary about me and my academic and professional journey. Let's  dive in!</div>
         </div>
       </Parallax>
       <div className="text-center">
@@ -57,7 +57,7 @@ export default function AboutMe() {
           <div>I am Vibha, an MS in Computer Science student at the University of Illinois at Chicago. <br/>
             I am originally from Bangalore, India, but currently reside in Chicago, IL. <br/>
             Prior to starting my graduate studies, I worked as a Software Engineer at Cimpress for over 2 years and have a Bachelor's degree in Information Science and Engineering. <br/>
-            I have worked on various tools and technologies such as React, Node.js, GraphQl, etc., and am constantly learning and exploring new technologies.<br/>
+            I have worked on various tools and technologies such as React, Node.js, PostgreSQL, etc., and am constantly learning and exploring new technologies.<br/>
           </div>
         </div>
         <div className="aboutme aboutme-ex-ed-container">
@@ -86,7 +86,8 @@ export default function AboutMe() {
               <FontAwesomeIcon icon={faGraduationCap} />
               <span> Master of Science in Computer Science</span><br/>
               <span className="text-muted">University of Illinois at Chicago, IL<br/>
-              Program Duration: Jan 2024 - Expected Dec 2025</span><br/>
+              Program Duration: Jan 2024 - Expected Dec 2025<br/>
+              GPA: 4.00/4.00</span><br/>
             </div>
             <div>
               <FontAwesomeIcon icon={faGraduationCap} />
@@ -104,11 +105,11 @@ export default function AboutMe() {
             <Row>
               <Col><FontAwesomeIcon icon={faDatabase} color="#E55958" size="2x" />
                 <p className="aboutme-skills-subheading">Languages and Databases</p>
-                <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, Basic C++, C#, & Python</p>
+                <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, & Python</p>
               </Col>
               <Col><FontAwesomeIcon className="fa-icon" icon={faTools} color="#037D49" size="2x" />
                 <p className="aboutme-skills-subheading">Tools and Technologies</p>
-                <p>Git, AWS, Jira, Cortex, Miro </p>
+                <p>Git, Docker, AWS, Jira, DBeaver, Supabase, Miro, Cortex </p>
               </Col>
               <Col><FontAwesomeIcon icon={faLineChart} color="#894EA4" size="2x" />
                 <p className="aboutme-skills-subheading">Frameworks and Libraries</p>

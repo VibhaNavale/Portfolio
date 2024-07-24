@@ -71,7 +71,7 @@ export default function Contact() {
             draggable: false,
           })
       }, () => {
-        toast.info('Apologies! Your message could not be sent. Please try again later.', {
+        toast.info('Apologies! Your message could not be sent. Please try again.', {
           position: "top-right",
           autoClose: 4000,
           hideProgressBar: false,
@@ -197,7 +197,7 @@ export default function Contact() {
             <a href="https://www.linkedin.com/in/vibha-navale/" target="_blank" rel="noreferrer noopener">
               <FontAwesomeIcon className="fa-icon linkedin-icon" icon={faLinkedin} color="#F19000" size="2xl" style={{ marginRight: "20px" }} />
             </a>
-            <a href="https://github.com/VibhaSNavale" target="_blank" rel="noreferrer noopener">
+            <a href="https://github.com/VibhaNavale" target="_blank" rel="noreferrer noopener">
               <FontAwesomeIcon className="fa-icon github-icon" icon={faGithub} color="#F19000" size="2xl" />
             </a>
         </div>

@@ -1,3 +1,3 @@
 # PORTFOLIO
 
-This is a portfolio created by Vibha S Navale, made using ReactJS.
+This portfolio was created by Vibha Navale. It highlights my work experience, projects, and certifications. I built this portfolio using ReactJS.

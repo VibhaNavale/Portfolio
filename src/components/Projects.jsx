@@ -7,8 +7,23 @@ import NavHeader from "./NavHeader";
 export default function Projects() {
 
   const cardItems = [{
-    image: "EyeTracking.jpeg",
-    title: "Design and Implementation of Eye Movement-based PIN Authentication System",
+      image: "FindYourRoof.jpg",
+      title: "Find Your Roof",
+      date: "Jan 2024 - Apr 2024",
+      text: "This web application aims to help homeless people in Chicago find affordable rental houses or nearby shelters, search for jobs, and upload documents to our reliable database.",
+      github: "https://github.com/VibhaNavale/Find-Your-Roof",
+      website: "https://findyourroof.netlify.app/",
+    },
+    {
+      image: "SocialMediaBuzz.jpeg",
+      title: "Social Media Buzz Prediction",
+      date: "Apr 2024",
+      text: "Utilizing UCI’s dataset, this ML project predicts social media buzz across Twitter and Tom’s Hardware forum. Using classification and regression models, it identifies the most accurate predictor for buzz events on these platforms.",
+      github: "https://github.com/Lakuna/CS-412-Final-Project",
+    },
+    {
+    image: "EyeTracking.jpg",
+    title: "Design & Implementation of Eye Movement-based PIN Authentication",
     date: "Aug 2020 - July 2021",
     text: "This project helps increase security by providing a double-layer protection – face detection + entering and identifying gaze-based PINs using a web camera through real-time eye detection and tracking.",
     github: "https://github.com/VibhaSNavale/Eye-Movement-based-PIN-Authentication",
@@ -45,14 +60,6 @@ export default function Projects() {
     text: "A web application made using HTML5, CSS, PHP, and MySQL. This project allows users to either sell or place bids on a product. It has an admin login as well.",
     github: "https://github.com/VibhaSNavale/EAuction-System",
     report: "E-Auction.pdf"
-  },
-  {
-    image: "FoodOrderManagement.png",
-    title: "Food order management system",
-    date: "May 2020",
-    text: "This system is used to maintain user records using a hashing indexing technique. It gives an option to insert, delete, and search users' order details.",
-    github: "https://github.com/VibhaSNavale/Food-Order-Management-System",
-    report: "FoodOrderManagement.pdf"
   }]
 
   const responsive = {
@@ -99,6 +106,8 @@ export default function Projects() {
                   <Card.Link href={require(`../assets/pdfs/${item.report}`)} target="_blank" rel="noreferrer noopener" style={{float: "right"}}>View Report</Card.Link>}
                   {item.paper &&
                   <Card.Link href={item.paper} target="_blank" rel="noreferrer noopener" style={{float: "right"}}>View Paper</Card.Link>}
+                  {item.website &&
+                  <Card.Link href={item.website} target="_blank" rel="noreferrer noopener" style={{float: "right"}}>View Website</Card.Link>}
                 </Card.Footer>
               </Card>
             )

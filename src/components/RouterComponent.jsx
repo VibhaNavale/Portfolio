@@ -12,9 +12,9 @@ export default function RouterComponent() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

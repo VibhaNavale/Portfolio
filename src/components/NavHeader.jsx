@@ -21,9 +21,9 @@ export default function NavHeader() {
       <div className="nav shift navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar" style={{zIndex: 1, backgroundColor: "white"}}>
         <ul className="navbar-nav mx-auto text-center">
           <li className="nav-item"><Link to="/" className={"nav-link" + (url === "/" ? " active" : "")}>Home</Link></li>
-          <li className="nav-item resume"><Link to="/projects" className={"nav-link" + (url === "/projects" ? " active" : "")}>Projects</Link></li>
-          <li className="nav-item"><Link to="/resume" className={"nav-link" + (url === "/resume" ? " active" : "")}>Resume </Link></li>
           <li className="nav-item"><Link to="/aboutme" className={"nav-link" + (url === "/aboutme" ? " active" : "")}>About Me</Link></li>
+          <li className="nav-item"><Link to="/projects" className={"nav-link" + (url === "/projects" ? " active" : "")}>Projects</Link></li>
+          <li className="nav-item resume"><Link to="/resume" className={"nav-link" + (url === "/resume" ? " active" : "")}>Resume</Link></li>
           <li className="nav-item"><Link to="/contact" className={"nav-link" + (url === "/contact" ? " active" : "")}>Contact</Link></li>
         </ul>
       </div>

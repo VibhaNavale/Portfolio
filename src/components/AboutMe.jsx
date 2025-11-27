@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Parallax } from "react-parallax";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap, faComputer, faMobilePhone, faDatabase, faTools, faLineChart } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faComputer, faMobilePhone, faDatabase, faTools, faLineChart, faTrophy, faUser } from "@fortawesome/free-solid-svg-icons";
 import NavHeader from "./NavHeader";
-import ColorSplash from "../assets/images/ColorSplash.jpg";
 
 export default function AboutMe() {
+  const [activeTab, setActiveTab] = useState('about');
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = require("../assets/js/fluid-simulation.js");
+    document.body.appendChild(script);
+  }, []);
 
   const cardItems = [{
     title: "'Best outgoing student' recognition in academics",
@@ -43,99 +48,151 @@ export default function AboutMe() {
   ]
 
   return (
-    <div>
+    <div className="aboutme-page">
       <NavHeader />
-      <Parallax className="parallax-image" bgImage={ColorSplash} bgImageStyle={{height: '110%', width: '100%'}} strength={800}>
-        <div style={{ height: "500px" }}>
-          <div className="parallax-text">Hi there! Hope you are having a fantastic day :) <br/>
-          This page has a brief summary about me and my academic and professional journey. Let's  dive in!</div>
+      <canvas className="fluid-canvas"></canvas>
+      <div className="aboutme-content">
+        <div className="aboutme-tabs">
+          <button 
+            className={`tab-button ${activeTab === 'about' ? 'active' : ''}`}
+            onClick={() => setActiveTab('about')}
+          >
+            <FontAwesomeIcon icon={faUser} /> About
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'experience' ? 'active' : ''}`}
+            onClick={() => setActiveTab('experience')}
+          >
+            <FontAwesomeIcon icon={faComputer} /> Experience
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'education' ? 'active' : ''}`}
+            onClick={() => setActiveTab('education')}
+          >
+            <FontAwesomeIcon icon={faGraduationCap} /> Education
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'skills' ? 'active' : ''}`}
+            onClick={() => setActiveTab('skills')}
+          >
+            <FontAwesomeIcon icon={faTools} /> Skills
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'achievements' ? 'active' : ''}`}
+            onClick={() => setActiveTab('achievements')}
+          >
+            <FontAwesomeIcon icon={faTrophy} /> Achievements
+          </button>
         </div>
-      </Parallax>
-      <div className="text-center">
-        <div className="aboutme bg-light">
-          <u><h3 className="aboutme-heading">A little bit about who I am and what I do</h3></u>
-          <div>I am Vibha, an MS in Computer Science student at the University of Illinois at Chicago. <br/>
-            I am originally from Bangalore, India, but currently reside in Chicago, IL. <br/>
-            Prior to starting my graduate studies, I worked as a Software Engineer at Cimpress for over 2 years and have a Bachelor's degree in Information Science and Engineering. <br/>
-            I have worked on various tools and technologies such as React, Node.js, PostgreSQL, etc., and am constantly learning and exploring new technologies.<br/>
-          </div>
-        </div>
-        <div className="aboutme aboutme-ex-ed-container">
-          <div className="div1">
-            <u><h3 className="aboutme-heading">Experience</h3></u>
-            <div>
-              <FontAwesomeIcon icon={faComputer} />
-              <span> Software Engineer</span><br/>
-              <span className="text-muted">
-                Cimpress<br/>
-                Bangalore, India | Remote<br/>
-                Duration: August 2021 - December 2023</span>
+
+        <div className="aboutme-panel">
+          {activeTab === 'about' && (
+            <div className="tab-content">
+              <h2 className="content-title">About Me</h2>
+              <div className="about-text">
+                <p>
+                  I'm <strong>Vibha</strong>, an MS in Computer Science student at the University of Illinois at Chicago. 
+                  Originally from Bangalore, India, now based in Chicago, IL.
+                </p>
+                <p>
+                  Prior to graduate studies, I worked as a Software Engineer at Cimpress for over 2 years. 
+                  I hold a Bachelor's degree in Information Science and Engineering and have experience with 
+                  React, Node.js, PostgreSQL, and other modern technologies.
+                </p>
+              </div>
             </div>
-            <div>
-              <FontAwesomeIcon icon={faMobilePhone} />
-              <span> Android App Developer Intern</span><br/>
-              <span className="text-muted">
-                NS Jain Constructions<br/>
-                Mangalore, India | Remote<br/>
-                Duration: June 2020 - July 2020</span>
+          )}
+
+          {activeTab === 'experience' && (
+            <div className="tab-content">
+              <h2 className="content-title">Experience</h2>
+              <div className="experience-list">
+                <div className="exp-item">
+                  <FontAwesomeIcon icon={faComputer} className="exp-icon" />
+                  <div className="exp-details">
+                    <h3>Software Engineer</h3>
+                    <p className="exp-company">Cimpress</p>
+                    <p className="exp-meta">Bangalore, India | Remote • Aug 2021 - Dec 2023</p>
+                  </div>
+                </div>
+                <div className="exp-item">
+                  <FontAwesomeIcon icon={faMobilePhone} className="exp-icon" />
+                  <div className="exp-details">
+                    <h3>Android App Developer Intern</h3>
+                    <p className="exp-company">NS Jain Constructions</p>
+                    <p className="exp-meta">Mangalore, India | Remote • Jun 2020 - Jul 2020</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="div2">
-            <u><h3 className="aboutme-heading">Education</h3></u>
-            <div>
-              <FontAwesomeIcon icon={faGraduationCap} />
-              <span> Master of Science in Computer Science</span><br/>
-              <span className="text-muted">University of Illinois at Chicago, IL<br/>
-              Program Duration: Jan 2024 - Expected Dec 2025<br/>
-              GPA: 4.00/4.00</span><br/>
+          )}
+
+          {activeTab === 'education' && (
+            <div className="tab-content">
+              <h2 className="content-title">Education</h2>
+              <div className="education-list">
+                <div className="edu-item">
+                  <FontAwesomeIcon icon={faGraduationCap} className="edu-icon" />
+                  <div className="edu-details">
+                    <h3>Master of Science in Computer Science</h3>
+                    <p className="edu-school">University of Illinois at Chicago</p>
+                    <p className="edu-meta">Chicago, IL • Jan 2024 - Expected Dec 2025</p>
+                    <p className="edu-gpa">GPA: 4.00/4.00</p>
+                  </div>
+                </div>
+                <div className="edu-item">
+                  <FontAwesomeIcon icon={faGraduationCap} className="edu-icon" />
+                  <div className="edu-details">
+                    <h3>Bachelor of Engineering in Information Science</h3>
+                    <p className="edu-school">RNS Institute of Technology</p>
+                    <p className="edu-meta">Bangalore, India • 2017 - 2021</p>
+                    <p className="edu-gpa">GPA: 9.08/10 | VTU Affiliated</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <FontAwesomeIcon icon={faGraduationCap} />
-              <span> Bachelor of Engineering in Information Science</span><br/>
-              <span className="text-muted">RNS Institute of Technology, Bangalore, India<br/>
-              Program Duration: 2017 - 2021<br/>
-              GPA: 9.08/10<br/>
-              Affiliated to: Visvesvaraya Technological University (VTU)</span><br/>
+          )}
+
+          {activeTab === 'skills' && (
+            <div className="tab-content">
+              <h2 className="content-title">Skills</h2>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <FontAwesomeIcon icon={faDatabase} className="skill-icon" />
+                  <h3>Languages & Databases</h3>
+                  <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, Python</p>
+                </div>
+                <div className="skill-item">
+                  <FontAwesomeIcon icon={faTools} className="skill-icon" />
+                  <h3>Tools & Technologies</h3>
+                  <p>Git, Docker, AWS, Jira, DBeaver, Supabase, Miro, Cortex</p>
+                </div>
+                <div className="skill-item">
+                  <FontAwesomeIcon icon={faLineChart} className="skill-icon" />
+                  <h3>Frameworks & Libraries</h3>
+                  <p>Next.js, React, Node.js, Angular, Jest, Mocha</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="aboutme bg-light">
-          <u><h3 className="aboutme-heading">Skills</h3></u>
-          <Container>
-            <Row>
-              <Col><FontAwesomeIcon icon={faDatabase} color="#E55958" size="2x" />
-                <p className="aboutme-skills-subheading">Languages and Databases</p>
-                <p>TS/JS, PostgreSQL, GraphQL, HTML, CSS, Java, & Python</p>
-              </Col>
-              <Col><FontAwesomeIcon className="fa-icon" icon={faTools} color="#037D49" size="2x" />
-                <p className="aboutme-skills-subheading">Tools and Technologies</p>
-                <p>Git, Docker, AWS, Jira, DBeaver, Supabase, Miro, Cortex </p>
-              </Col>
-              <Col><FontAwesomeIcon icon={faLineChart} color="#894EA4" size="2x" />
-                <p className="aboutme-skills-subheading">Frameworks and Libraries</p>
-                <p>Next.js, React, Node.js, Angular, Jest, Mocha</p>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="aboutme aboutme-achievements-container">
-          <u><h3 className="aboutme-heading">Achievements and Certifications</h3></u>
-          {
-            cardItems.map((item) => {
-              return(
-                <Card style={{ maxWidth: '25em', display: "inline-flex", minHeight: "23em", margin: "5px" }}>
-                  <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{item.subtitle}</Card.Subtitle>
-                    <Card.Text>{item.text}</Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Card.Link href={item.link} target="_blank" rel="noreferrer noopener">View Certificate</Card.Link>
-                  </Card.Footer>
-                </Card>
-              )
-            })
-          }
+          )}
+
+          {activeTab === 'achievements' && (
+            <div className="tab-content achievements-content">
+              <h2 className="content-title">Achievements & Certifications</h2>
+              <div className="achievements-list">
+                {cardItems.map((item, index) => (
+                  <div key={index} className="achievement-item">
+                    <h3>{item.title}</h3>
+                    <p className="achievement-date">{item.subtitle}</p>
+                    <p className="achievement-desc">{item.text}</p>
+                    <a href={item.link} target="_blank" rel="noreferrer noopener" className="achievement-link">
+                      View Certificate →
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

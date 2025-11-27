@@ -4,31 +4,54 @@ import NavHeader from "./NavHeader";
 import VibhaNavale from "../assets/images/VibhaNavale.jpeg";
 
 export default function Home() {
-
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = require("../assets/js/fluid-simulation.js");
-    document.body.appendChild(script);
+    // Check if we just reloaded
+    const hasReloaded = sessionStorage.getItem('homePageReloaded');
+    
+    if (!hasReloaded) {
+      // Set flag and reload
+      sessionStorage.setItem('homePageReloaded', 'true');
+      window.location.reload();
+    } else {
+      // Clear flag after a short delay so next visit will reload
+      const timer = setTimeout(() => {
+        sessionStorage.removeItem('homePageReloaded');
+      }, 1000);
+
+      // Load fluid simulation
+      const loadTimer = setTimeout(() => {
+        const canvas = document.querySelector('.fluid-canvas');
+        if (canvas && canvas.offsetWidth > 0) {
+          import("../assets/js/fluid-simulation.js")
+            .catch(err => console.error('Error loading fluid simulation:', err));
+        }
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(loadTimer);
+      };
+    }
   }, []);
 
   return (
-    <div>
+    <div className="home-page">
       <NavHeader />
       <canvas className="fluid-canvas"></canvas>
-      <div>
-        <h1 className="home-text welcome-text">Welcome to my portfolio!</h1><br/>
+      <div className="home-content">
+        <h1 className="home-text welcome-text"><span>Welcome to my portfolio!</span></h1>
         <img src={VibhaNavale} alt="Vibha" className="my-pic" />
         <div className="home-text intro-text">
           <Typewriter
             options={{
-              delay: 110,
-              cursor: '_'
+              delay: 80,
+              cursor: '|'
             }}
             onInit={(typewriter)=> {
               typewriter
-              .typeString(`I am <b>VIBHA NAVALE,</b><br/>
-                an MS in Computer Science student at the University of Illinois Chicago (UIC) <br/>
-                with 2.5 years of experience as a Full-stack Software Engineer.`)
+              .typeString(`Hi! I am <b>VIBHA NAVALE</b>,<br/>
+                an MS in Computer Science student at the University of Illinois Chicago (UIC),
+                with over 2 years of experience as a Full-stack Software Engineer.`)
               .start();
             }}
           />

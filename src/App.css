@@ -8,45 +8,116 @@
 }
 
 /* Home screen */
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
 
 .logo {
   width: 5.5em;
   height: 4.5em;
 }
 
-.home-text {
+.home-content {
   position: absolute;
-  left: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+  pointer-events: none;
+  transform: translateY(-30px);
+}
+
+.home-content * {
+  pointer-events: auto;
+}
+
+.home-text {
+  position: relative;
+  left: auto;
   color: #000;
   text-align: center;
   justify-content: center;
+  width: 100%;
 }
 
 .welcome-text {
-  top: 20%;
-  transform: translate(-50%, 10%);
-  font-size: 3rem;
+  top: auto;
+  transform: none;
+  font-size: 2.5rem;
   font-family: 'Marker Felt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 0px;
+  margin: 0 0 20px 0;
+  position: relative;
+  z-index: 101;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.welcome-text span {
+  color: #D9774A;
+  position: relative;
+  z-index: 1;
+  padding: 6px 12px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.welcome-text span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  z-index: -1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .intro-text {
-  top: 70%;
-  transform: translate(-50%, -50%);
-  font-size: 22px;
+  top: auto;
+  transform: none;
+  font-size: 18px;
   font-family: monospace, 'Courier New', Courier;
-  margin: 20px;
-  width: 100%;
-  padding: 50px;
+  margin: 20px 0 0 0;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+  z-index: 101;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
 }
 
 .my-pic {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 18em;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  max-width: 14em;
+  width: 14em;
+  height: 14em;
   border-radius: 100%;
+  border: 4px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #F9D976, #F39F86) border-box;
+  box-shadow: 0 8px 25px rgba(243, 159, 134, 0.3);
+  z-index: 101;
+  object-fit: cover;
+  margin: 0 0 15px 0;
+  display: block;
 }
 
 .card {
@@ -68,73 +139,93 @@
   }
 }
 
-@media only screen and (min-width: 966px) and (max-width: 3000px) {
-  .intro-text {
-    top: 75%;
+@media only screen and (max-width: 965px) {
+  .home-content {
+    padding-top: 70px;
+    padding-bottom: 30px;
   }
-}
-
-@media only screen and (min-width: 510px) and (max-width: 965px) {
+  
+  .welcome-text {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
   .my-pic {
-    top: 55%;
-    max-width: 15em;
+    width: 12em;
+    height: 12em;
+    max-width: 12em;
+    margin-bottom: 10px;
   }
+  
   .intro-text {
-    top: 80%;
+    font-size: 16px;
+    padding: 15px;
+    margin-top: 15px;
   }
 }
 
 @media only screen and (max-width: 509px) {
-  .my-pic {
-    top: 60%;
-    max-width: 14em;
-  }
   .welcome-text {
-    font-size: 2.5em;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
   }
+  
+  .my-pic {
+    width: 10em;
+    height: 10em;
+    max-width: 10em;
+    margin-bottom: 8px;
+  }
+  
   .intro-text {
-    top: 85%;
-    font-size: medium;
-    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
   }
 }
 
-@media screen and (max-height: 600px) { 
-  .my-pic {
-    display: none;
+@media screen and (max-height: 700px) {
+  .home-content {
+    padding-top: 60px;
+    padding-bottom: 20px;
   }
+  
   .welcome-text {
-    top: 30%;
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
+  
+  .my-pic {
+    width: 10em;
+    height: 10em;
+    max-width: 10em;
+    margin-bottom: 8px;
+  }
+  
   .intro-text {
-    top: 65%;
-    margin: 0;
-    padding: 0;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 8px;
   }
 }
 
-@media screen and (max-height: 430px) {
+@media screen and (max-height: 600px) {
   .my-pic {
-    display: none;
+    width: 8em;
+    height: 8em;
+    max-width: 8em;
+    margin-bottom: 5px;
   }
-  .intro-text {
-    top: 75%;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media screen and (max-height: 360px) { 
-  .my-pic {
-    display: none;
-  }
+  
   .welcome-text {
-    margin-top: 10%;
+    font-size: 1.75rem;
+    margin-bottom: 8px;
   }
+  
   .intro-text {
-    top: 100%;
-    margin: 0;
-    padding: 0;
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 5px;
   }
 }
 
@@ -553,7 +644,7 @@ li.nav-item>.nav-link.active {
   background: rgba(255, 255, 255, 0.95);
   border: 2px solid #333;
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   min-height: 250px;
   max-height: calc(100vh - 200px);
@@ -1331,6 +1422,10 @@ li.nav-item>.nav-link.active {
 
 .fluid-canvas {
   max-height: 85vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* Resume Page Styles */

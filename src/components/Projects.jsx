@@ -190,8 +190,6 @@ export default function Projects() {
                     style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                   >
                     {filteredItems.map((item, index) => {
-                      const primaryTag = item.tags && item.tags.length > 0 ? item.tags[0] : 'all';
-                      const primaryCategoryInfo = categories.find(cat => cat.id === primaryTag);
                       return (
                         <div key={index} className="project-card">
                           <div className="project-image-container">

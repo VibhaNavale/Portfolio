@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap, faComputer, faMobilePhone, faDatabase, faTools, faLineChart, faTrophy, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faGraduationCap, faComputer, faDatabase, faTools, faLineChart, faTrophy, faUser } from "@fortawesome/free-solid-svg-icons";
 import NavHeader from "./NavHeader";
 import PageDecorations from "./PageDecorations";
 

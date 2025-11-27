@@ -5,6 +5,7 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 export default function RouterComponent() {
   return (
@@ -16,6 +17,7 @@ export default function RouterComponent() {
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

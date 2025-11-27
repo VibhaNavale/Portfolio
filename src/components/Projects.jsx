@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt, faFilePdf, faChevronLeft, faChevronRight, faCode, faBrain, faServer, faBook, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import NavHeader from "./NavHeader";
+import PageDecorations from "./PageDecorations";
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -158,6 +159,7 @@ export default function Projects() {
   return (
     <div className="projects-page">
       <NavHeader />
+      <PageDecorations />
       <div className="projects-content">
         <h2 className="projects-title">Projects</h2>
         <div className="projects-filters">

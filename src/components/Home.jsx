@@ -50,8 +50,8 @@ export default function Home() {
             onInit={(typewriter)=> {
               typewriter
               .typeString(`Hi! I am <b>VIBHA NAVALE</b>,<br/>
-                an MS in Computer Science student at the University of Illinois Chicago (UIC),
-                with over 2 years of experience as a Full-stack Software Engineer.`)
+                a recent M.S. in Computer Science graduate from the University of Illinois Chicago (UIC),
+                and a full-stack software engineer with over two years of experience.`)
               .start();
             }}
           />
